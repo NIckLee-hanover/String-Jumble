@@ -26,8 +26,8 @@ handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
 
-string = input("Please enter a string of text (the bigger the better): ")
-
+string = str(input("Please enter a string of text (the bigger the better): "))
+single = ""
 
 def reverse(s): # string reversing function
     s2 = ""
@@ -39,16 +39,21 @@ def reverse(s): # string reversing function
 
 def word(s,n):
     s2 = ""
-    while s[n] != " " or n < 0:
+    while s[n] != " ":
         s2 = ("{0}{1}".format(s2, s[n]))
         n -= 1
-        print(s[n])
-    del(s2,0)
+    single = reverse(s2)
+    #print(len(s2))
 
-print(word(string, int(len(string)-1)))
-
+def re2():
+    print(word(string, int(len(string)-)))
+    
+    
+    
+word(string, int(len(string)-1))
+print(single)
 reverse(string)
-
+re2()
 
 
 
