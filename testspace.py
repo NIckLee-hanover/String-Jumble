@@ -39,7 +39,6 @@ print(s2)
 ### finds single word
 ws = ""
 def word(s,n):
-    ws = ""
     global ws
     while s[n] != " ":
         ws = ("{0}{1}".format(ws, s[n]))
@@ -48,12 +47,12 @@ def word(s,n):
             break
 ###
 while letter < len(string):
+    ws = ""
     word(string,letter)
-    print(ws,1)
-    s3 = ("{1}{0}".format(s3, ws))
+    s3 = ("{1} {0} ".format(s3, ws))
     loop = len(ws)
-    print(s3)
-    letter += (loop)
+    letter += ((loop)+1)
+print (s3)
 
 
 
