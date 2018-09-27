@@ -25,15 +25,35 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
-#string = input("Please enter a string of text (the bigger the better): ")
+string = input("Please enter a string of text (the bigger the better): ")
+### prints reverse string
+j = (len(string)-1)
 s2 = ""
+sthree = ""
+letter = 0
+for i in range(len(string)):
+    s2 = ("{0}{1}".format(s2, string[j]))
+    j -= 1
+    
+print(s2)
+### finds single word
+ws = ""
 def word(s,n):
+    global ws
     while s[n] != " ":
-        s2 = ("{0}{1}".format(s2, s[n]))
+        ws = ("{0}{1}".format(ws, s[n]))
         n += 1
+        if n == len(s):
+            break
+###
+while letter < len(string):
+    word(string,letter)
+    print(ws)
+    
 
-
-word('test this program',0)
+word(string,0)
+print(ws)
+print(len(s2))
 
 
 
