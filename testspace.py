@@ -29,7 +29,7 @@ string = input("Please enter a string of text (the bigger the better): ")
 ### prints reverse string
 j = (len(string)-1)
 s2 = ""
-sthree = ""
+s3 = ""
 letter = 0
 for i in range(len(string)):
     s2 = ("{0}{1}".format(s2, string[j]))
@@ -39,6 +39,7 @@ print(s2)
 ### finds single word
 ws = ""
 def word(s,n):
+    ws = ""
     global ws
     while s[n] != " ":
         ws = ("{0}{1}".format(ws, s[n]))
@@ -48,12 +49,12 @@ def word(s,n):
 ###
 while letter < len(string):
     word(string,letter)
-    print(ws)
-    
+    print(ws,1)
+    s3 = ("{1}{0}".format(s3, ws))
+    loop = len(ws)
+    print(s3)
+    letter += (loop)
 
-word(string,0)
-print(ws)
-print(len(s2))
 
 
 
