@@ -26,39 +26,44 @@ handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
 string = input("Please enter a string of text (the bigger the better): ")
-# variables 
-j = (len(string)-1)
-s2 = ""
-s3 = ""
-letter = 0
+
 ### prints reverse string
+sl = (len(string)-1)
+s2 = ""
 def reverse(s):
-    global s2, j
-    for i in range(len(string)):
-        s2 = ("{0}{1}".format(s2, string[j]))
-        j -= 1
-    
+    global s2, sl
+    for i in range(len(s)):
+        s2 = ("{0}{1}".format(s2, s[sl]))
+        sl -= 1
+reverse(string)
 print(s2)
+
 ### finds single word
-ws = ""
+wl = ""
 def word(s,n):
-    global ws
+    global wl
     while s[n] != " ":
-        ws = ("{0}{1}".format(ws, s[n]))
+        wl = ("{0}{1}".format(wl, s[n]))
         n += 1
         if n == len(s):
             break
+
 ### yoda talk here
+s3 = ""
+letter = 0
 while letter < len(string):
-    ws = ""
+    wl = ""
     word(string,letter)
-    s3 = ("{1} {0} ".format(s3, ws))
-    loop = len(ws)
-    letter += ((loop)+1)
-
-
-
+    s3 = ("{1} {0}".format(s3, wl))
+    legnth = len(wl)
+    letter += ((legnth)+1)
 print (s3)
+
+### last step.
+s2 = ""
+s3 = s3[:-1]
+reverse(s3)
+print(s2)
 
 
 
