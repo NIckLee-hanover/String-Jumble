@@ -60,8 +60,8 @@ while letter < len(string):
 print (s3)
 
 ### last step.
-s2 = ""
-s3 = s3[:-1]
+s2 = "" # resets the s2 variable for the reverse function
+s3 = s3[:-1] # the last char of s3 is a space and will apear in the beginning of the last line
 reverse(s3)
 print(s2)
 
