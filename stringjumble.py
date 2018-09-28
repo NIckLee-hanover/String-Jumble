@@ -1,7 +1,7 @@
 """
 stringjumble.py
 Author: Nick Lee
-Credit: Probably a lot but we'll see
+Credit: Stackoverflow for line 64 and errors in 36 and 46
 
 Assignment: String jumble
 
