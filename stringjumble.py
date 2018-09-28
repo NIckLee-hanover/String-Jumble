@@ -25,35 +25,51 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
+string = input("Please enter a string of text (the bigger the better): ")
 
-string = str(input("Please enter a string of text (the bigger the better): "))
-single = ""
-
-def reverse(s): # string reversing function
-    s2 = ""
-    letter = int(len(s)-1)
+### prints reverse string
+sl = (len(string)-1)
+s2 = ""
+def reverse(s):
+    global s2, sl
     for i in range(len(s)):
-        s2 = ("{0}{1}".format(s2, s[letter]))
-        letter -= 1
-    print(s2)
-
-def word(s,n):
-    s2 = ""
-    while s[n] != " ":
-        s2 = ("{0}{1}".format(s2, s[n]))
-        n -= 1
-    single = reverse(s2)
-    #print(len(s2))
-
-def re2():
-    print(word(string, int(len(string)-)))
-    
-    
-    
-word(string, int(len(string)-1))
-print(single)
+        s2 = ("{0}{1}".format(s2, s[sl]))
+        sl -= 1
 reverse(string)
-re2()
+print(s2)
+
+### finds single word
+wl = ""
+def word(s,n):
+    global wl
+    while s[n] != " ":
+        wl = ("{0}{1}".format(wl, s[n]))
+        n += 1
+        if n == len(s):
+            break
+
+### yoda talk here
+s3 = ""
+letter = 0
+while letter < len(string):
+    wl = ""
+    word(string,letter)
+    s3 = ("{1} {0}".format(s3, wl))
+    legnth = len(wl)
+    letter += ((legnth)+1)
+print (s3)
+
+### last step.
+s2 = "" # resets the s2 variable for the reverse function
+s3 = s3[:-1] # the last char of s3 is a space and will apear in the beginning of the last line
+reverse(s3)
+print(s2)
+
+
+
+
+
+
 
 
 
